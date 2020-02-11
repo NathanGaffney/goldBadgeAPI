@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>World Map API</title>
+
+    <link href='./main.css' rel='stylesheet'>
+</head>
+<body>
+    <div class='wrapper'>
+        
+        <div class='header'>
+            <h2>World Map API</h2>
+        </div>
+        <div class='main'>
+            <div id="mapid"></div>
+        </div>
+        <div class='controls'>
+            <form>
+                <p>
+                    <lable for='search'>Enter Location:</lable>
+                    <input type='text' placeholder="(City,State,Zipcode)" id='search' class='search' required>
+                </p>
+                <p id='button'>
+                    <button class='submit'>Submit Search</button>
+                </p>
+            </form>
+            <div class='history'>
+                <h3>Places</h3>
+                <div id='overflow'>
+                    <table class="tableLinks">
+                        <tr>
+                            <th>Searched</th>
+                            <th>Longitude</th>
+                            <th>Latitude</th>
+                        </tr>
+                        <!-- <tr id="tableData">
+
+                        </tr> -->
+                    </table>
+                </div>
+        </div>
+        </div>
+        
+    <div class='results'>
+            <nav>
+                <button class='prev'>Previous</button>
+                <button class='next'>Next</button>
+            </nav>
+    </div>
+</div>
+
+
+    <script src='./script.js'></script>
+    <script src="leaflet.js"></script>
+</body>
+</html>
