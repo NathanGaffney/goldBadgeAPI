@@ -136,7 +136,7 @@ form p:nth-of-type(1) {
     font-size: 15px;
     font-weight: bold;
     border-radius: 2px;
-    background-color: lightsteelblue;
+    background-color: lightgreen;
 }
 
 .submit:hover {

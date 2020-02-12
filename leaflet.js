@@ -12,8 +12,17 @@ function setView(latlng) {
     console.log(latlng);
     mymap.flyTo([latlng.lat,latlng.lng], 10);
     // mymap.setView([latlng.lat,latlng.lng], 10);
-    L.marker([latlng.lat,latlng.lng]).addTo(mymap) // try removing to fix marker bud
+    L.marker([latlng.lat,latlng.lng]).addTo(mymap)
     .bindPopup(markText)
+    .openPopup();
+}
+
+function history(latlng) {
+    console.log(latlng);
+    mymap.flyTo([latlng.lat,latlng.lng], 10);
+    // mymap.setView([latlng.lat,latlng.lng], 10);
+    L.marker([latlng.lat,latlng.lng]).addTo(mymap)
+    // .bindPopup(markText)
     .openPopup();
 }
 

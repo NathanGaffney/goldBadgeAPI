@@ -61,7 +61,8 @@ function tableData(x) {
         lat: lat,
         lng: lng
     }
-    setView(latlng);
+    
+    history(latlng);
 }
 
 // FETCH LOGIC
@@ -76,11 +77,12 @@ function fetchResults(e) {
     })
     .then(function(jsonData) {
         markText = jsonData.results[0].formatted;
+        console.log(markText)
         console.log(jsonData.results);
         data = jsonData.results[0].geometry
         console.log(data);
         setView(data);
-        addData(data);
+        addData(data, markText);
     })
     .catch(function(err) {
         // alert('No Results Found')
